@@ -19,11 +19,11 @@ const props = defineProps({
 </script>
 
 <template>
-  <div id="browse-card">
-    <img :src="props.bcData.imgPath" :alt="props.bcData.imgTitle">
+  <article id="browse-card">
+    <nuxt-img :src="props.bcData.imgPath" :alt="props.bcData.imgTitle" class="card-img"/>
 
-    <h5>{{ props.bcData.imgTitle }}</h5>
-  </div>
+    <h5 class="card-title">{{ props.bcData.imgTitle }}</h5>
+  </article>
 </template>
 
 <style scoped lang="scss">
@@ -35,14 +35,14 @@ const props = defineProps({
   margin-top: 1.5rem;
   margin-bottom: 2rem;
 
-  img {
+  .card-img {
     border-radius: 6px;
 
     width: inherit;
     height: 480px;
   }
 
-  h5 {
+  .card-title {
     color: #333;
     font-weight: 600;
     font-size: 24px;

@@ -16,16 +16,16 @@ const elmts = [
 </script>
 
 <template>
-  <div id="browse">
-    <div id="browse-title">
-      <h3>Browse The Range</h3>
+  <section id="browse" aria-label="Browse furniture categories">
+    <header id="browse-title">
+      <h2>Browse The Range</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </div>
+    </header>
 
     <div id="browse-cards">
       <BrowseCard v-for="(bc, index) in elmts" :key="index" :bc-data="bc"></BrowseCard>
     </div>
-  </div>
+  </section>
 </template>
 
 <style scoped lang="scss">
@@ -45,7 +45,7 @@ const elmts = [
     flex-direction: column;
     align-items: center;
 
-    h3 {
+    h2 {
       font-weight: 700;
       font-size: 32px;
       line-height: 100%;
