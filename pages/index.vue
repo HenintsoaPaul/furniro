@@ -1,27 +1,38 @@
 <script setup lang="ts">
-
+useHead({
+  link: [
+    {
+      rel: 'stylesheet',
+      href: 'https://fonts.googleapis.com/css2?family=Poppins&family=Montserrat&display=swap'
+    }
+  ]
+})
 </script>
 
 <template>
-<Header></Header>
+  <div id="landing">
+    <Header></Header>
 
-<Banner></Banner>
+    <Banner></Banner>
 
-  <Browse></Browse>
+    <Browse></Browse>
 
-  <hr>
+    <hr>
 
-  <Desc></Desc>
+    <Desc></Desc>
 
-  <hr>
+    <hr>
 
-  <Frame></Frame>
+    <Frame></Frame>
 
-  <hr>
+    <hr>
 
-  <Footer></Footer>
+    <Footer></Footer>
+  </div>
 </template>
 
 <style scoped lang="scss">
-
+//#landing {
+//  padding: 0 12.125rem;
+//}
 </style>
