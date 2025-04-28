@@ -29,6 +29,24 @@ const props = defineProps({
 <style scoped lang="scss">
 #browse-card {
   width: 381px;
-  height: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+
+  img {
+    border-radius: 6px;
+
+    width: inherit;
+    height: 480px;
+  }
+
+  h5 {
+    color: #333;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 100%;
+  }
 }
 </style>
