@@ -32,7 +32,15 @@ useHead({
 </template>
 
 <style scoped lang="scss">
-//#landing {
-//  padding: 0 12.125rem;
-//}
+#landing {
+  //padding: 0 12.125rem;
+
+  hr {
+    margin: 2.5rem 0;
+    background-color: #D9D9D9;
+    border: none;
+    width: 100%;
+    height: 1px;
+  }
+}
 </style>
