@@ -1,9 +1,8 @@
 <script setup lang="ts">
 
-const titles = [
-    "Description",
-    "Additional Information",
-    "Reviews[5]"
+const descCards = [
+  "/images/sofa.png",
+  "/images/sofa.png",
 ]
 
 </script>
@@ -27,8 +26,7 @@ const titles = [
   </div>
 
   <div id="sary">
-    <img src="/images/sofa.png" alt="sofa">
-    <img src="/images/sofa.png" alt="sofa">
+    <DescCard v-for="(dc, idx) in descCards" :key="idx" :img-path="dc"></DescCard>
   </div>
 </template>
 
@@ -57,6 +55,10 @@ h3 {
     width: 605px;
     height: 348px;
   }
+}
+
+.sary-div {
+  background: #F9F1E7;
 }
 
 </style>
