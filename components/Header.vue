@@ -28,39 +28,40 @@ const headerIcons = [
 </script>
 
 <template>
-  <div id="header">
+  <header>
     <div id="header-container">
       <!-- left -->
       <div id="header-left">
-        <nuxt-img src="/images/logo.png" alt="Furniro logo" width="50" heigth="50"/>
+        <nuxt-img src="/images/logo.png" alt="Furniro logo" width="50" height="50"/>
         <h3>Furniro</h3>
       </div>
 
       <!-- center -->
-      <div id="header-center">
+      <nav>
         <ul>
           <li v-for="(link, idx) in centerLinks" :key="idx">
             <router-link :to="link.path">{{ link.name }}</router-link>
           </li>
         </ul>
-      </div>
+      </nav>
 
       <!-- right -->
       <div id="header-right">
         <ul>
           <li v-for="(ic, idx) in headerIcons" :key="idx" :aria-label="ic.label">
-            <component :is="ic.icon" />
+            <button :aria-label="ic.label">
+              <component :is="ic.icon"/>
+            </button>
           </li>
         </ul>
       </div>
     </div>
-
-  </div>
+  </header>
 </template>
 
 
 <style lang="scss">
-#header {
+header {
   width: 100%;
   height: 100px;
   display: flex;
@@ -90,7 +91,7 @@ const headerIcons = [
       }
     }
 
-    #header-center {
+    nav {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -129,9 +130,10 @@ const headerIcons = [
 
         li {
           list-style: none;
-          a {
-            text-decoration: none;
-            color: black;
+
+          button {
+            all: unset;
+            cursor: pointer;
           }
         }
       }
