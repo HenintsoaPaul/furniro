@@ -38,6 +38,7 @@ const frameIcons: MyFrameIcon[] = [
 #frame {
   background-color: #FAF3EA;
   padding: 5rem 1rem;
+  margin: 3rem 0;
 
   ul {
     display: flex;

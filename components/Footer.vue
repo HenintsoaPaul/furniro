@@ -26,16 +26,15 @@ const helps: MyLink[] = [
   <footer id="footer">
     <div id="footer-container">
       <div id="footer-left">
-        <h3>Furniro.</h3>
+        <h2>Furniro.</h2>
         <p>
           400 University Drive Suite 200 Coral Gables,
-        </p>
-        <p>
+          <br>
           FL 33134 USA
         </p>
       </div>
 
-      <div id="footer-links">
+      <nav id="footer-links" aria-label="Footer main navigation">
         <p class="link-title">Links</p>
         <ul>
           <li v-for="(li, idx) in links" :key="idx">
@@ -44,9 +43,9 @@ const helps: MyLink[] = [
             </nuxt-link>
           </li>
         </ul>
-      </div>
+      </nav>
 
-      <div id="footer-helps">
+      <nav id="footer-helps" aria-label="Footer help links">
         <p class="link-title">Help</p>
         <ul>
           <li v-for="(li, idx) in helps" :key="idx">
@@ -55,16 +54,16 @@ const helps: MyLink[] = [
             </nuxt-link>
           </li>
         </ul>
-      </div>
+      </nav>
 
       <div id="newsletter">
         <p class="link-title">Newsletter</p>
-        <NewsletterForm />
+        <NewsletterForm/>
       </div>
     </div>
     <hr>
     <div id="copyright">
-      <p>2023 furino. All rights reverved</p>
+      <p>2023 furniro. All rights reserved</p>
     </div>
   </footer>
 
@@ -89,7 +88,7 @@ footer {
     }
 
     #footer-left {
-      h3 {
+      h2 {
         font-weight: 700;
         font-size: 24px;
         margin-top: 0;
