@@ -68,6 +68,9 @@ const helps = [
   font-family: 'Poppins', sans-serif;
   line-height: 100%;
   letter-spacing: 0;
+  padding: 0 5rem;
+
+  display: grid;
 
   #title {
     font-weight: 700;

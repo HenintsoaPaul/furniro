@@ -111,7 +111,7 @@ const descCards = [
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 2.5rem;
-    padding: 0 1rem;
+    padding: 0 5rem;
   }
 }
 </style>

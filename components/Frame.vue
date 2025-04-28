@@ -65,7 +65,7 @@ const frameIcons: MyFrameIcon[] = [
         font-weight: 600;
         font-size: 25px;
         line-height: 150%;
-
+        color: #242424;
         margin: 0;
       }
 
@@ -73,7 +73,7 @@ const frameIcons: MyFrameIcon[] = [
         font-weight: 500;
         font-size: 20px;
         line-height: 150%;
-
+        color: #898989;
         margin: 0;
       }
     }
