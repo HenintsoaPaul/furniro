@@ -20,7 +20,7 @@ const centerLinks: NavLink[] = [
     <div id="header-container">
       <!-- left -->
       <div id="header-left">
-        <nuxt-img src="/images/logo.png" alt="Furniro logo" width="50" heigth="32"/>
+        <nuxt-img src="/images/logo.png" alt="Furniro logo" width="50" heigth="50"/>
         <h3>Furniro</h3>
       </div>
 
@@ -96,9 +96,8 @@ const centerLinks: NavLink[] = [
     grid-template-columns: 1fr 1fr 1fr;
 
     #header-left {
-
       display: flex;
-      height: inherit;
+      height: 41px;
       width: 100%;
       align-items: center;
 
@@ -106,9 +105,6 @@ const centerLinks: NavLink[] = [
 
       h3 {
         font-family: 'Montserrat', sans-serif;
-        width: 130px;
-        height: 41px;
-
         font-weight: 700;
         font-size: 34px;
         line-height: 100%;
@@ -120,7 +116,6 @@ const centerLinks: NavLink[] = [
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 75px;
 
       width: 100%;
 
@@ -143,12 +138,9 @@ const centerLinks: NavLink[] = [
           }
         }
       }
-
-
     }
 
     #header-right {
-      //background: #892222;
       display: flex;
       align-items: center;
       justify-content: center;
