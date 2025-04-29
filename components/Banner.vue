@@ -115,7 +115,7 @@
         transition: background-color 0.3s ease;
 
         &:hover {
-          background-color: darken(#B88E2F, 10%);
+          background-color: #614a15;
         }
       }
     }

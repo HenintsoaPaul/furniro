@@ -8,16 +8,16 @@ interface MyLink {
 }
 
 const links: MyLink[] = [
-  {name: "Home", path: "/Home"},
-  {name: "Shop", path: "/Shop"},
-  {name: "About", path: "/About"},
-  {name: "Contact", path: "/Contact"},
+  {name: "Home", path: "/"},
+  {name: "Shop", path: "/shop"},
+  {name: "About", path: "/about"},
+  {name: "Contact", path: "/contact"},
 ]
 
 const helps: MyLink[] = [
-  {name: "Payment Options", path: "/Payment Options"},
-  {name: "Returns", path: "/Returns"},
-  {name: "Privacy Policies", path: "/Privacy Policies"},
+  {name: "Payment Options", path: "/help/payment-options"},
+  {name: "Returns", path: "/help/returns"},
+  {name: "Privacy Policies", path: "/help/privacy-policies"},
 ]
 
 const goHome = () => {

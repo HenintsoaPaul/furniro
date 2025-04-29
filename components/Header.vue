@@ -21,7 +21,8 @@ const headerIcons: IconLink = [
 ];
 
 const goHome = () => {
-  this.$router.push("/");
+  const router = useRouter();
+  router.push("/");
 }
 
 </script>

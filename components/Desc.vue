@@ -1,20 +1,37 @@
 <script setup lang="ts">
 
+import type {ImgData, NavLink} from "~/types";
+
 interface MyLink {
-  name: string;
-  path: string;
+  navLink: NavLink;
   focused: boolean;
 }
 
 const links: MyLink[] = [
-  {name: "Description", path: "/desc", focused: true},
-  {name: "Additional Information", path: "/info", focused: false},
-  {name: "Reviews[5]", path: "/reviews", focused: false},
+  {
+    navLink: {
+      name: "Description", path: "/about"
+    },
+    focused: true
+  },
+  {
+    navLink: {
+      name: "Additional Information", path: "/about"
+    },
+    focused: false
+  }
+  ,
+  {
+    navLink: {
+      name: "Reviews[5]", path: "/about"
+    },
+    focused: false
+  }
 ]
 
-const descCards = [
-  {imgPath: "/images/sofa.png", imgAlt: "Sofa"},
-  {imgPath: "/images/sofa.png", imgAlt: "Sofa"},
+const descCards: ImgData[] = [
+  {src: "/images/sofa.png", alt: "Sofa"},
+  {src: "/images/sofa.png", alt: "Sofa"},
 ]
 
 </script>
@@ -24,10 +41,10 @@ const descCards = [
     <nav aria-label="Product description navigation">
       <ul class="ul-config">
         <li v-for="(li, idx) in links" :key="idx">
-          <nuxt-link :to="li.path"
+          <nuxt-link :to="li.navLink.path"
                      :class="{ 'focused' : li.focused }"
                      class="lbl-config">
-            {{ li.name }}
+            {{ li.navLink.name }}
           </nuxt-link>
         </li>
       </ul>
@@ -51,8 +68,10 @@ const descCards = [
     </article>
 
     <div id="cards-container">
-      <DescCard v-for="(dc, idx) in descCards" :key="idx"
-                :img-path="dc.imgPath" :img-alt="dc.imgAlt"/>
+      <DescCard v-for="(dc, idx) in descCards"
+                :key="idx"
+                :img-path="dc.src"
+                :img-alt="dc.alt"/>
     </div>
   </section>
 </template>

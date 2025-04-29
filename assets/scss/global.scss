@@ -18,6 +18,17 @@
   flex-direction: row;
 }
 
+.jumbotron {
+  background: #FFF3E3;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20rem;
+  width: 100%;
+  margin: 2rem 0;
+}
+
 :root {
   --furniro-primary-color: #B88E2F;
   --furniro-secondary-color: #FFF3E3;
