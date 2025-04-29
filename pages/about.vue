@@ -13,7 +13,7 @@ useHead({
   <div id="about">
     <Header />
 
-    <div>
+    <div class="jumbotron">
       <h1>About</h1>
     </div>
 

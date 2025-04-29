@@ -14,7 +14,7 @@ useHead({
     <Header />
 
     <div>
-      <h1>Privacy Policies</h1>
+      <h1 class="jumbotron">Privacy Policies</h1>
     </div>
 
     <Footer />

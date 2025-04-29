@@ -14,7 +14,7 @@ useHead({
     <Header />
 
     <div>
-      <h1>Contact</h1>
+      <h1 class="jumbotron">Contact</h1>
     </div>
 
     <Footer />
