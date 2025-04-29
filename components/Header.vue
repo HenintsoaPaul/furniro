@@ -27,7 +27,9 @@ const headerIcons: IconLink = [
     <div id="header-container">
       <!-- left -->
       <div id="header-left">
-        <nuxt-img src="/images/logo.png" alt="Furniro logo" width="75" height="50"/>
+        <nuxt-img src="/images/logo.png"
+                  alt="Furniro logo"
+                  width="75" height="50"/>
         <h3 class="lbl-config">Furniro</h3>
       </div>
 

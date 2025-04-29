@@ -11,6 +11,13 @@
   border-radius: 10px;
 }
 
+.ul-config {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+}
+
 :root {
   --furniro-primary-color: #B88E2F;
   --furniro-secondary-color: #FFF3E3;

@@ -37,7 +37,7 @@ useHead({
 
   hr {
     margin: 2.5rem 0;
-    background-color: #D9D9D9;
+    background-color: var(--furniro-hr-bg);
     border: none;
     width: 100%;
     height: 1px;

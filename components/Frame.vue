@@ -43,7 +43,7 @@ const frameIcons: FrameIcon[] = [
 
 <template>
   <div id="frame">
-    <ul>
+    <ul class="ul-config">
       <li v-for="(fi, idx) in frameIcons" :key="idx">
         <component :is="fi.iconLink.icon"/>
         <div class="icon-info">
@@ -62,14 +62,10 @@ const frameIcons: FrameIcon[] = [
   margin: 3rem 0;
 
   ul {
-    display: flex;
-    flex-direction: row;
     align-items: center;
-    padding: 0;
     justify-content: space-around;
 
     li {
-      list-style: none;
       font-family: 'Poppins', sans-serif;
       letter-spacing: 0;
 
@@ -81,22 +77,23 @@ const frameIcons: FrameIcon[] = [
         display: flex;
         flex-direction: column;
         margin-left: 0.75rem;
-      }
 
-      h5 {
-        font-weight: 600;
-        font-size: 25px;
-        line-height: 150%;
-        color: var(--furniro-text-frame-black);
-        margin: 0;
-      }
+        h5, p {
+          line-height: 150%;
+          margin: 0;
+        }
 
-      p {
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 150%;
-        color: var(--furniro-text-frame-grey);
-        margin: 0;
+        h5 {
+          font-weight: 600;
+          font-size: 25px;
+          color: var(--furniro-text-frame-black);
+        }
+
+        p {
+          font-weight: 500;
+          font-size: 20px;
+          color: var(--furniro-text-frame-grey);
+        }
       }
     }
   }
