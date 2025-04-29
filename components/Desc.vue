@@ -22,9 +22,11 @@ const descCards = [
 <template>
   <section id="desc">
     <nav aria-label="Product description navigation">
-      <ul>
+      <ul class="ul-config">
         <li v-for="(li, idx) in links" :key="idx">
-          <nuxt-link :to="li.path" :class="{ 'focused' : li.focused }">
+          <nuxt-link :to="li.path"
+                     :class="{ 'focused' : li.focused }"
+                     class="lbl-config">
             {{ li.name }}
           </nuxt-link>
         </li>
@@ -33,10 +35,11 @@ const descCards = [
 
 
     <article aria-label="Product description details">
-      <p>Embodying the raw, wayward spirit of rock ‘n’ roll, the Kilburn portable active stereo speaker takes the
+      <p class="lbl-config">Embodying the raw, wayward spirit of rock ‘n’ roll, the Kilburn portable active stereo
+        speaker takes the
         unmistakable look and sound of Marshall, unplugs the chords, and takes the show on the road.</p>
 
-      <p>
+      <p class="lbl-config">
         Weighing in under 7 pounds, the Kilburn is a lightweight piece of vintage styled engineering. Setting the bar as
         one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced
         audio
@@ -65,24 +68,16 @@ const descCards = [
     padding: 0;
 
     ul {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
       gap: 3rem;
 
-
       li {
-        list-style: none;
-
         a {
           text-decoration: none;
-          color: #9F9F9F;
+          color: var(--furniro-text-grey);
 
           font-family: 'Poppins', sans-serif;
           font-weight: 500;
           font-size: 24px;
-          line-height: 100%;
-          letter-spacing: 0;
 
           &.focused {
             color: black;
@@ -101,9 +96,7 @@ const descCards = [
       font-family: 'Poppins', sans-serif;
       font-weight: 400;
       font-size: 16px;
-      line-height: 100%;
-      letter-spacing: 0;
-      color: #9F9F9F;
+      color: var(--furniro-text-grey);
     }
   }
 

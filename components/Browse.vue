@@ -1,16 +1,28 @@
 <script setup lang="ts">
-const elmts = [
+
+import type {BrowseCard} from "~/types";
+
+const cards: BrowseCard[] = [
   {
-    imgPath: "/images/browse/b1.png",
-    imgTitle: "Dining"
+    imgData: {
+      src: "/images/browse/b1.png",
+      alt: "Browse dinning category",
+    },
+    title: "Dining"
   },
   {
-    imgPath: "/images/browse/b1.png",
-    imgTitle: "Living"
+    imgData: {
+      src: "/images/browse/b2.png",
+      alt: "Browse living category"
+    },
+    title: "Living"
   },
   {
-    imgPath: "/images/browse/b1.png",
-    imgTitle: "Bedroom"
+    imgData: {
+      src: "/images/browse/b3.png",
+      alt: "Browse bedroom category"
+    },
+    title: "Bedroom"
   },
 ]
 </script>
@@ -22,8 +34,12 @@ const elmts = [
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </header>
 
-    <div id="browse-cards">
-      <BrowseCard v-for="(bc, index) in elmts" :key="index" :bc-data="bc"></BrowseCard>
+    <div id="browse-cards-container">
+      <BrowseCard v-for="(bc, index) in cards"
+                  :key="index"
+                  :bc-data="bc"
+                  :is-right="index === 1"
+      />
     </div>
   </section>
 </template>
@@ -61,7 +77,7 @@ const elmts = [
     }
   }
 
-  #browse-cards {
+  #browse-cards-container {
     display: flex;
     gap: 1rem;
   }
