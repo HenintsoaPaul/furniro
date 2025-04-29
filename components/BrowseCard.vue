@@ -18,7 +18,7 @@ const props = defineProps({
 
 <template>
   <article class="browse-card">
-    <div class="img-container">
+    <div class="img-container br-radius">
       <nuxt-img :src="props.bcData.imgData.src"
                 :alt="props.bcData.imgData.alt"
                 class="card-img br-radius"

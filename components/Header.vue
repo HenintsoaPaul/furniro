@@ -108,6 +108,24 @@ header {
           a {
             text-decoration: none;
             color: black;
+            position: relative;
+
+            &::before {
+              width: 100%;
+              height: 3px;
+
+              transition: 300ms;
+              content: "";
+              position: absolute;
+              background-color: var(--furniro-primary-color);
+              bottom: -10px;
+              opacity: 0;
+            }
+
+            &:hover::before {
+              bottom: -5px;
+              opacity: 1;
+            }
           }
         }
       }
