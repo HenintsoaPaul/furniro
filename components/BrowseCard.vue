@@ -49,7 +49,7 @@ const props = defineProps({
   }
 
   .card-title {
-    color: #333;
+    color: var(--furniro-text-dark);
     font-weight: 600;
     font-size: 24px;
     line-height: 100%;

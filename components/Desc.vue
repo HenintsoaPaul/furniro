@@ -76,7 +76,7 @@ const descCards = [
 
         a {
           text-decoration: none;
-          color: #9F9F9F;
+          color: var(--furniro-text-grey);
 
           font-family: 'Poppins', sans-serif;
           font-weight: 500;
@@ -103,7 +103,7 @@ const descCards = [
       font-size: 16px;
       line-height: 100%;
       letter-spacing: 0;
-      color: #9F9F9F;
+      color: var(--furniro-text-grey);
     }
   }
 

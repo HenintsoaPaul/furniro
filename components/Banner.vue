@@ -69,7 +69,7 @@
         font-size: 16px;
         line-height: 100%;
         letter-spacing: 3px;
-        color: #333;
+        color: var(--furniro-text-dark);
       }
 
       &.maj {
@@ -85,7 +85,7 @@
         font-size: 18px;
         line-height: 24px;
         letter-spacing: 0;
-        color: #333;
+        color: var(--furniro-text-dark);
       }
     }
 
