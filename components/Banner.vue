@@ -87,17 +87,17 @@
       }
     }
 
-    h3 {
-      margin-bottom: .75rem;
+    h4 {
+      margin-top: .75rem;
     }
 
     h5 {
-      margin-top: .75rem;
+      margin-bottom: .75rem;
     }
 
     button {
       all: unset;
-      margin-top: 5rem;
+      margin-top: 4rem;
       font-family: 'Poppins', sans-serif;
 
       a {
