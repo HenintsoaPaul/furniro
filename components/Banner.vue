@@ -4,7 +4,10 @@
 
 <template>
   <section id="banner" aria-label="New Arrival banner">
-    <nuxt-img src="/images/img.png" alt="Scandinavian interior mockup with wall decal in cozy background" priority/>
+    <nuxt-img src="/images/banner.jpg"
+              alt="Scandinavian interior mockup with wall decal in cozy background"
+              class="img-banner"
+              preload/>
 
     <!-- hover -->
     <article>
@@ -26,15 +29,23 @@
 #banner {
   width: 100%;
   height: 45rem;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
   position: relative;
+  overflow: hidden;
+
+  .img-banner {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 72%;
+  }
 
   article {
     position: absolute;
+    z-index: 2;
     bottom: 20%;
     right: 8%;
     height: 28rem;
