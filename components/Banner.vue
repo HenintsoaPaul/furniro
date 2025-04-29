@@ -10,13 +10,18 @@
               preload/>
 
     <!-- hover -->
-    <article>
+    <article class="br-radius">
       <h5 class="sub">New Arrival</h5>
 
-      <h2 class="maj">Discover Our New Collection</h2>
+      <h2 class="maj">
+        Discover Our<br>
+        New Collection
+      </h2>
 
-      <h4 class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper
-        mattis.</h4>
+      <h4 class="para">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper
+        mattis.
+      </h4>
 
       <div>
         <nuxt-link to="/shop">BUY NOW</nuxt-link>
@@ -47,14 +52,13 @@
     position: absolute;
     z-index: 2;
     bottom: 20%;
-    right: 8%;
+    right: 7%;
     height: 28rem;
-    width: 42rem;
+    width: 45rem;
 
     background: #FFF3E3;
-    padding: 5rem 2.5rem;
+    padding: 5rem 5rem 5rem 2.5rem;
     box-sizing: border-box;
-    border-radius: 6px;
 
     h2, h4, h5 {
       font-family: 'Poppins', sans-serif;
@@ -83,6 +87,14 @@
         letter-spacing: 0;
         color: #333;
       }
+    }
+
+    h3 {
+      margin-bottom: .75rem;
+    }
+
+    h5 {
+      margin-top: .75rem;
     }
 
     div {
