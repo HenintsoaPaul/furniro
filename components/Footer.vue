@@ -23,7 +23,7 @@ const helps: MyLink[] = [
 </script>
 
 <template>
-  <footer id="footer">
+  <footer id="footer" class="lbl-config">
     <div id="footer-container">
       <div id="footer-left">
         <h2>Furniro.</h2>
@@ -72,8 +72,6 @@ const helps: MyLink[] = [
 <style scoped lang="scss">
 footer {
   font-family: 'Poppins', sans-serif;
-  line-height: 100%;
-  letter-spacing: 0;
   padding: 0 5rem;
 
   #footer-container {
@@ -82,7 +80,7 @@ footer {
     grid-gap: 5rem;
 
     p {
-      color: #9F9F9F;
+      color: var(--furniro-text-grey);
       margin-bottom: 0;
       margin-top: 0.5rem;
     }
@@ -117,7 +115,7 @@ footer {
 
   hr {
     border: none;
-    background-color: #D9D9D9;
+    background-color: var(--furniro-hr-bg);
     width: 100%;
     height: 1px;
     margin: 3rem 0;

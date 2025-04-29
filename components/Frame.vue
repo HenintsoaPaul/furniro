@@ -15,7 +15,7 @@ const frameIcons: MyFrameIcon[] = [
   {icon: TrophyIcon, title: 'High Quality', para: 'crafted from top materials'},
   {icon: WarrantyIcon, title: 'Warranty Protection', para: 'Over 2 years'},
   {icon: ShippingIcon, title: 'Free Shipping', para: 'Order over 150 $'},
-  {icon: SupportIcon, title: '24/7 Support', para: 'Dedicated support'},
+  {icon: SupportIcon, title: '24 / 7 Support', para: 'Dedicated support'},
 ];
 
 </script>
@@ -36,7 +36,7 @@ const frameIcons: MyFrameIcon[] = [
 
 <style scoped lang="scss">
 #frame {
-  background-color: #FAF3EA;
+  background-color: var(--furniro-frame-color);
   padding: 5rem 1rem;
   margin: 3rem 0;
 
@@ -66,7 +66,7 @@ const frameIcons: MyFrameIcon[] = [
         font-weight: 600;
         font-size: 25px;
         line-height: 150%;
-        color: #242424;
+        color: var(--furniro-text-frame-black);
         margin: 0;
       }
 
@@ -74,7 +74,7 @@ const frameIcons: MyFrameIcon[] = [
         font-weight: 500;
         font-size: 20px;
         line-height: 150%;
-        color: #898989;
+        color: var(--furniro-text-frame-grey);
         margin: 0;
       }
     }
