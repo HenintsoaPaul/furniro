@@ -23,9 +23,9 @@
         mattis.
       </h4>
 
-      <div>
+      <button>
         <nuxt-link to="/shop">BUY NOW</nuxt-link>
-      </div>
+      </button>
     </article>
   </section>
 </template>
@@ -53,11 +53,9 @@
     z-index: 2;
     bottom: 20%;
     right: 7%;
-    height: 28rem;
     width: 45rem;
-
     background: #FFF3E3;
-    padding: 5rem 5rem 5rem 2.5rem;
+    padding: 4rem 2.5rem 2.5rem;
     box-sizing: border-box;
 
     h2, h4, h5 {
@@ -97,7 +95,8 @@
       margin-top: .75rem;
     }
 
-    div {
+    button {
+      all: unset;
       margin-top: 5rem;
       font-family: 'Poppins', sans-serif;
 
@@ -111,6 +110,13 @@
         letter-spacing: 3px;
         color: #fff;
         background-color: var(--furniro-primary-color);
+
+        display: inline-block;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: darken(#B88E2F, 10%);
+        }
       }
     }
   }
