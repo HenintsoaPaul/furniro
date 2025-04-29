@@ -77,7 +77,7 @@
         font-size: 52px;
         line-height: 65px;
         letter-spacing: 0;
-        color: #B88E2F;
+        color: var(--furniro-primary-color);
       }
 
       &.para {
@@ -110,7 +110,7 @@
         line-height: 100%;
         letter-spacing: 3px;
         color: #fff;
-        background-color: #B88E2F;
+        background-color: var(--furniro-primary-color);
       }
     }
   }
