@@ -1,45 +1,51 @@
 <script setup lang="ts">
 
+import type {BrowseCard} from "~/types";
+import type {PropType} from "vue";
+
 const props = defineProps({
   bcData: {
     required: true,
-    type: {
-      imgTitle: {
-        type: String,
-        required: true,
-      },
-      imgPath: {
-        type: String,
-        required: true
-      }
-    }
+    type: Object as PropType<BrowseCard>
+  },
+  isRight: {
+    type: Boolean,
+    default: false
   }
 });
 
 </script>
 
 <template>
-  <article id="browse-card">
-    <nuxt-img :src="props.bcData.imgPath" :alt="props.bcData.imgTitle" class="card-img"/>
-
-    <h5 class="card-title">{{ props.bcData.imgTitle }}</h5>
+  <article class="browse-card">
+    <nuxt-img :src="props.bcData.imgData.src"
+              :alt="props.bcData.imgData.alt"
+              class="card-img br-radius"
+              :class="{'card-img-right' : props.isRight}"
+              lazy/>
+    <h5 class="card-title">
+      {{ props.bcData.title }}
+    </h5>
   </article>
 </template>
 
 <style scoped lang="scss">
-#browse-card {
-  width: 381px;
+.browse-card {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 1.5rem;
-  margin-bottom: 2rem;
+  position: relative;
 
   .card-img {
-    border-radius: 6px;
+    width: 24rem;
+    height: 30rem;
+    object-fit: cover;
+    object-position: bottom left;
+  }
 
-    width: inherit;
-    height: 480px;
+  .card-img-right {
+    object-position: bottom right !important;
   }
 
   .card-title {

@@ -34,8 +34,12 @@ const cards: BrowseCard[] = [
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </header>
 
-    <div id="browse-cards">
-      <BrowseCard v-for="(bc, index) in elmts" :key="index" :bc-data="bc"></BrowseCard>
+    <div id="browse-cards-container">
+      <BrowseCard v-for="(bc, index) in cards"
+                  :key="index"
+                  :bc-data="bc"
+                  :is-right="index === 1"
+      />
     </div>
   </section>
 </template>
@@ -73,7 +77,7 @@ const cards: BrowseCard[] = [
     }
   }
 
-  #browse-cards {
+  #browse-cards-container {
     display: flex;
     gap: 1rem;
   }
