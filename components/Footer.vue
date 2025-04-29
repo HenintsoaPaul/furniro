@@ -20,12 +20,16 @@ const helps: MyLink[] = [
   {name: "Privacy Policies", path: "/Privacy Policies"},
 ]
 
+const goHome = () => {
+  this.$router.push("/");
+}
+
 </script>
 
 <template>
   <footer id="footer" class="lbl-config">
     <div id="footer-container">
-      <div id="footer-left">
+      <div id="footer-left" @click="goHome">
         <h2>Furniro.</h2>
         <p>
           400 University Drive Suite 200 Coral Gables,
@@ -91,6 +95,7 @@ footer {
         font-size: 24px;
         margin-top: 0;
         margin-bottom: 4rem;
+        cursor: pointer;
       }
     }
 

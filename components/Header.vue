@@ -20,13 +20,17 @@ const headerIcons: IconLink = [
   {icon: ShoppingCartIcon, label: 'Shopping cart'},
 ];
 
+const goHome = () => {
+  this.$router.push("/");
+}
+
 </script>
 
 <template>
   <header>
     <div id="header-container">
       <!-- left -->
-      <div id="header-left">
+      <div id="header-left" @click="goHome">
         <nuxt-img src="/images/logo.png"
                   alt="Furniro logo"
                   width="75" height="50"/>
@@ -79,6 +83,7 @@ header {
       width: 100%;
       align-items: center;
       padding-left: 54px;
+      cursor: pointer;
 
       h3 {
         font-family: 'Montserrat', sans-serif;
