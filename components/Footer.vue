@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 import NewsletterForm from "~/components/Newsletter/NewsletterForm.vue";
 
 interface MyLink {
@@ -21,104 +20,141 @@ const helps: MyLink[] = [
 ]
 
 const goHome = () => {
-  this.$router.push("/");
+  const router = useRouter()
+  router.push("/")
 }
-
 </script>
 
 <template>
-  <footer id="footer" class="lbl-config">
-    <div id="footer-container">
-      <div id="footer-left" @click="goHome">
-        <h2>Furniro.</h2>
-        <p>
+  <footer id="footer" class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <h2 class="logo" @click="goHome">Furniro.</h2>
+        <p class="address">
           400 University Drive Suite 200 Coral Gables,
-          <br>
+          <br/>
           FL 33134 USA
         </p>
       </div>
 
-      <nav id="footer-links" aria-label="Footer main navigation">
+      <nav class="footer-links" aria-label="Footer main navigation">
         <p class="link-title">Links</p>
-        <ul>
-          <li v-for="(li, idx) in links" :key="idx">
-            <nuxt-link :to="li.path">
+        <ul class="links-list">
+          <li v-for="(li, idx) in links" :key="idx" class="link-item">
+            <NuxtLink :to="li.path" class="link">
               {{ li.name }}
-            </nuxt-link>
+            </NuxtLink>
           </li>
         </ul>
       </nav>
 
-      <nav id="footer-helps" aria-label="Footer help links">
+      <nav class="footer-helps" aria-label="Footer help links">
         <p class="link-title">Help</p>
-        <ul>
-          <li v-for="(li, idx) in helps" :key="idx">
-            <nuxt-link :to="li.path">
+        <ul class="links-list">
+          <li v-for="(li, idx) in helps" :key="idx" class="link-item">
+            <NuxtLink :to="li.path" class="link">
               {{ li.name }}
-            </nuxt-link>
+            </NuxtLink>
           </li>
         </ul>
       </nav>
 
-      <div id="newsletter">
+      <div class="newsletter">
         <p class="link-title">Newsletter</p>
         <NewsletterForm/>
       </div>
     </div>
-    <hr>
-    <div id="copyright">
+    <hr class="divider"/>
+    <div class="copyright">
       <p>2023 furniro. All rights reserved</p>
     </div>
   </footer>
-
 </template>
 
 <style scoped lang="scss">
-footer {
+.footer {
   font-family: 'Poppins', sans-serif;
-  padding: 0 5rem;
+  padding: 2rem 5rem;
+  max-width: 1920px;
+  margin: 0 auto;
 
-  #footer-container {
+  &-container {
     display: grid;
-    grid-template-columns: 32rem 10rem 10rem 1fr;
-    grid-gap: 5rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
 
-    p {
-      color: var(--furniro-text-grey);
-      margin-bottom: 0;
-      margin-top: 0.5rem;
-    }
-
-    #footer-left {
-      h2 {
-        font-weight: 700;
-        font-size: 24px;
-        margin-top: 0;
-        margin-bottom: 4rem;
-        cursor: pointer;
-      }
-    }
-
-    ul {
-      padding: 0;
-
-      li {
-        list-style: none;
-        margin-bottom: 3rem;
-
-        a {
-          text-decoration: none;
-          color: #000;
-        }
-      }
-    }
-
-    .link-title {
-      margin-bottom: 4rem;
+    @media (min-width: 1400px) {
+      grid-template-columns: 32rem 10rem 10rem 1fr;
+      gap: 5rem;
     }
   }
 
-  hr {
+  &-left {
+    .logo {
+      font-weight: 700;
+      font-size: 24px;
+      margin: 0 0 2rem 0;
+      cursor: pointer;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: var(--furniro-primary-color, #000);
+      }
+    }
+
+    .address {
+      color: var(--furniro-text-grey);
+      margin: 0.5rem 0 0 0;
+      line-height: 1.6;
+    }
+  }
+
+  .link-title {
+    color: var(--furniro-text-grey);
+    margin: 0 0 2rem 0;
+    font-weight: 500;
+    font-size: 1.1rem;
+  }
+
+  .links-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    .link-item {
+      margin-bottom: 1.5rem;
+
+      @media (min-width: 768px) {
+        margin-bottom: 2rem;
+      }
+
+      @media (min-width: 1400px) {
+        margin-bottom: 3rem;
+      }
+
+      .link {
+        text-decoration: none;
+        color: #000;
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: var(--furniro-primary-color, #000);
+        }
+      }
+    }
+  }
+
+  .newsletter {
+    @media (min-width: 768px) {
+      grid-column: span 2;
+    }
+
+    @media (min-width: 1400px) {
+      grid-column: auto;
+    }
+  }
+
+  .divider {
     border: none;
     background-color: var(--furniro-hr-bg);
     width: 100%;
@@ -126,13 +162,13 @@ footer {
     margin: 3rem 0;
   }
 
-  #copyright {
+  .copyright {
     p {
       font-weight: 400;
-      font-size: 16px
+      font-size: 16px;
+      color: var(--furniro-text-grey);
+      margin: 0 0 2rem 0;
     }
-
-    margin-bottom: 3rem;
   }
 }
 </style>
